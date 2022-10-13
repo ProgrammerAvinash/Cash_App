@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+
+  <body>
+    <div id="app">
+      <div id="desc" class="main">
+        <h1>Cash Register Manager</h1>
+        <p>
+          Enter the bill amount and cash given by the customer and know minimum
+          number of notes to return.
+        </p>
+      </div>
+      <div id="calc" class="main">
+        <label for="amount">Bill Amount:</label>
+        <input type="text" id="amount" name="bill_amount" />
+        <label for="cash">Cash Given:</label>
+        <input type="text" id="cash" name="cash_given" />
+        <button id="check">Check</button>
+      </div>
+      <div id="result" class="main">
+        <h3 id="message"></h3>
+        <h2>Return Change</h2>
+        <table id="denom_table">
+          <tr id="change_count">
+            <td>No of notes</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="change_amount">
+            <td>Note</td>
+            <td>2000</td>
+            <td>500</td>
+            <td>100</td>
+            <td>20</td>
+            <td>10</td>
+            <td>5</td>
+            <td>1</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>
