@@ -1,18 +1,32 @@
-let bill_amount;
-let cash_given;
-let result = [];
 let note = [2000, 500, 100, 20, 10, 5, 1];
 let note_row_length =
   document.getElementById("denom_table").rows[1].cells.length - 1;
 
 document.getElementById("check").addEventListener("click", () => {
-  bill_amount = document.getElementById("amount").value;
+  let bill_amount;
+  let cash_given;
+  let result = [];
+  bill_amount_value = document.getElementById("amount").value;
+
+  cash_given_value = document.getElementById("cash").value;
+
+  bill_amount = Number(bill_amount_value);
   console.log(bill_amount);
-
-  cash_given = document.getElementById("cash").value;
+  cash_given = Number(cash_given_value);
   console.log(cash_given);
-
-  if (bill_amount && cash_given) {
+  if (
+    cash_given <= bill_amount ||
+    bill_amount == false ||
+    cash_given == false
+  ) {
+    document.getElementById("message").innerHTML = "Please enter valid amount";
+    for (let i = 1; i < note.length; i++) {
+      document.getElementById("denom_table").rows[0].cells[i].innerHTML = "";
+    }
+  } else {
+    for (let i = 1; i < note.length; i++) {
+      document.getElementById("denom_table").rows[0].cells[i].innerHTML = "";
+    }
     document.getElementById("message").innerHTML = "";
     let hold = cash_given - bill_amount;
     note.map((element) => {
@@ -52,10 +66,5 @@ document.getElementById("check").addEventListener("click", () => {
     console.log(
       document.getElementById("denom_table").rows[0].cells[1].innerHTML == false
     );
-  } else {
-    document.getElementById("message").innerHTML = "Please enter amount";
-    for (let i = 1; i < note.length; i++) {
-      document.getElementById("denom_table").rows[0].cells[i].innerHTML = "";
-    }
   }
 });
