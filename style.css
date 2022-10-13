@@ -1,0 +1,50 @@
+body {
+  font-family: sans-serif;
+}
+#app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+label {
+  margin-bottom: 10px;
+}
+input {
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border-color: blue;
+}
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+table,
+tr,
+td {
+  border: 1px solid blue;
+  border-collapse: collapse;
+}
+
+#change_count {
+  height: 60px;
+}
+#change_amount {
+  height: 40px;
+}
+td {
+  padding: 10px;
+}
+
+h1 {
+  color: blue;
+}
+
+button {
+  background-color: blue;
+  color: white;
+  padding: 6px;
+  border-radius: 5px;
+}
